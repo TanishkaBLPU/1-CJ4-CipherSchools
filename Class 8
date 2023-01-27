@@ -1,0 +1,120 @@
+Control flow 
+=>(FIRST PART) 
+
+
+package coreJava;
+
+class Car{
+	String name;
+	String colour;
+	int year;
+	int maxSpeed;
+	void accelerate() {
+		System.out.println("Car is accelerating");
+	}
+}
+
+public class CarStudy {
+	public static void main(String[] args) {
+		Car polo = new Car();
+		System.out.println(polo.name);
+		System.out.println(polo.colour);
+		System.out.println(polo.year);
+		System.out.println(polo.maxSpeed);
+		
+		polo.name = "Polo";
+		polo.colour = "Red";
+		polo.year = 2016;
+		polo.maxSpeed = 120;
+		
+		System.out.println(polo.name);
+		System.out.println(polo.colour);
+		System.out.println(polo.year);
+		System.out.println(polo.maxSpeed);
+		
+	}
+
+}
+  
+
+=>(SECOND PART)
+
+
+package coreJava;
+import java.util.*;
+
+class Student{
+	String name ;
+	int marks;
+	boolean checkPass() 
+	{
+		if(marks>40)
+			{
+			return true;
+			}
+		else {
+			return false;
+		}
+	}
+}
+
+
+public class ControlFlow {
+	
+	int findMax(int a, int b , int c) {
+		if(a>b) {
+			if(a>c) {
+				return a;
+			}
+			else {
+				return c;
+			}
+		}
+		else {
+			if(b>c) {
+				return b;
+			}
+			else {
+				return c;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Student s1 = new Student();
+		s1.name = "Ram";
+		s1.marks = 80;
+		
+		Student s2 = new Student();
+		s2.name = "Sham";
+		s2.marks = 30;
+		
+		System.out.println(s1.checkPass());
+		System.out.println(s2.checkPass());
+		
+		ControlFlow cf= new ControlFlow();
+		System.out.println(cf.findMax(10, 7, 15));
+		
+		Scanner sc= new Scanner(System.in);
+		
+		char c = 'a';
+		switch(c) {
+		case 'a':
+			System.out.println("Hi, i'am A");
+			break;
+		case 'b':
+			System.out.println("Hi, i'am B");
+			break;
+		case 'c':
+			System.out.println("Hi, i'am C");
+			break;
+		default :
+			System.out.println("Hi, i'am not A, B or C");
+				
+		}
+		System.out.println("After Switch");
+		
+	}
+
+}
+
+
